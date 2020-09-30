@@ -33,10 +33,13 @@ code {
 footer {
   background-color: #6c757d /*#002133*/ /*#282c34*/;
   position: absolute;
+  font-size: 85%;
+  font-style: italic;
+  color:white;
   left: 0;
   right: 0;
   bottom: 0;
-  min-height: 7rem;
+  min-height: 5rem;
 }
 
 table {

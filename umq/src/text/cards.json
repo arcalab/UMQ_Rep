@@ -1,0 +1,15 @@
+{
+	"cards":
+	[
+	{
+		"qiskit": {
+			"title": "Qiskit Demo",
+			"body": "How to program a quantum computer with IBM Q Qiskit."
+		},
+		"quipper": {
+			"title": "Quipper Demo",
+			"body": "How to write quantum circuits in Quipper."
+		}
+	}
+	]
+}

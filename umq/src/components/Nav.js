@@ -7,7 +7,7 @@ import { Nav, Navbar, NavDropdown, Form, FormControl } from 'react-bootstrap';
 function Nav1() {
   return (
     <>
-    <Navbar collapseOnSelect expand="lg" bg="secondary" variant="light" sticky="top">
+    <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark" sticky="top">
       <Navbar.Brand href="/">Home</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">

@@ -18,17 +18,16 @@ function FooterInfo(){
 		       <Col md={4}>
 		       <br/>
 		       <a href="https://www.di.uminho.pt" target="_blank" rel="noopener noreferrer">
-		       	<Image src={UMDI} height={71} />
+		       	<Image src={UMDI} height={50} />
 		       </a>
 		       </Col>
 		       <Col md={4}>
 		       <br/>
 		       <a href="//arca.di.uminho.pt/index.html" target="_blank" rel="noopener noreferrer">
-		       	<Image src={Arca} height={71}/>
+		       	<Image src={Arca} height={50}/>
 		       </a>
 		       </Col>
 		       <Col md={4}>
-		       <br/>
 		       <br/>
 		       <p>ana.neri AT quantalab.uminho.pt</p>
 		       </Col>

@@ -9,21 +9,20 @@ import {
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // must import this AND npm install
 import HomePage from './HomePage';
 import welcome from '../text/welcome.json';
+import datacards from '../text/cards.json';
 
 
 function App() {
   return (
     <div>
         <Nav1 /> 
-
         <Router>
          <Switch>
           <Route path="/">
-           <HomePage title={welcome.title} body={welcome.body}/>
+           <HomePage title={welcome.title} body={welcome.body} datacards={datacards}/>
           </Route>
          </Switch>
         </Router>
-        
         <footer>
           <Footer />
         </footer>
