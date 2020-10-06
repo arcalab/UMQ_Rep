@@ -12,8 +12,12 @@ function Nav1() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <NavDropdown title="Browser" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/"></NavDropdown.Item>
+          <NavDropdown title="Browse by:" id="collasible-nav-dropdown">
+            <NavDropdown.Item href="/browse?type=authors"> Authors </NavDropdown.Item>
+            <NavDropdown.Item href="/browse?type=title">Title</NavDropdown.Item>
+            <NavDropdown.Item href="/browse?type=type">Document type</NavDropdown.Item>
+            <NavDropdown.Item href="/browse?type=date">Date</NavDropdown.Item>
+            <NavDropdown.Item href="/browse?type=subject">Subject</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Form inline>

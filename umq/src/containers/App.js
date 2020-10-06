@@ -8,8 +8,7 @@ import {
 } from 'react-router-dom';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // must import this AND npm install
 import HomePage from './HomePage';
-import welcome from '../text/welcome.json';
-import datacards from '../text/cards.json';
+import Browser from './Browser';
 
 
 function App() {
@@ -19,7 +18,10 @@ function App() {
         <Router>
          <Switch>
           <Route path="/">
-           <HomePage title={welcome.title} body={welcome.body} datacards={datacards}/>
+           <HomePage/>
+          </Route>
+          <Route path={"/browser"} component={BrowserRouteLoader}>
+           <Browser/>
           </Route>
          </Switch>
         </Router>

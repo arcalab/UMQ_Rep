@@ -1,6 +1,5 @@
 {
 	"cards":
-	[
 	{
 		"qiskit": {
 			"title": "Qiskit Demo",
@@ -11,5 +10,4 @@
 			"body": "How to write quantum circuits in Quipper."
 		}
 	}
-	]
 }

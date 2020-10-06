@@ -5,49 +5,49 @@ import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import qiskit from '../img/qiskit.png';
-import quipper from '../img/haskell.png';
+import qiskitIMG from '../img/qiskit.png';
+import quipperIMG from '../img/haskell.png';
 import Button from 'react-bootstrap/Button';
+import welcome from '../text/welcome.json';
+import datacards from '../text/cards.json';
 
-function Welcome({title="Welcome", body="Hi!"}) {
+function Welcome() {
 	return (
 		<Jumbotron>
-		<h1>{title}</h1>
+		<h1>{welcome.title}</h1>
 		<br/>
-		<p>{body}</p>
+		<p>{welcome.body}</p>
 		</Jumbotron>
 		
 	);
 }
 
-function DemoCards({datacards}) {
-	
-	const mycards = Object.values(datacards);	
+function DemoCards() {
+
 	return (
 		<CardColumns>
-			
 			<Card border="secondary">
-				<Card.Img variant="top" src={qiskit} />
+				<Card.Img variant="top" src={qiskitIMG} />
 				<Card.Body>
-					<Card.Title> {mycards[0].qiskit.title} </Card.Title>
-					<Card.Text> {mycards[0].qiskit.body}	</Card.Text>
+					<Card.Title> {datacards.cards.qiskit.title} </Card.Title>
+					<Card.Text> {datacards.cards.qiskit.body} </Card.Text>
 					<Button variant="secondary">Go</Button>
 				</Card.Body>
 			</Card>
 			
 			<Card border="secondary">
-				<Card.Img variant="top" src={quipper} />
+				<Card.Img variant="top" src={quipperIMG} />
 				<Card.Body>
-					<Card.Title> {mycards[0].quipper.title} </Card.Title>
-					<Card.Text> {mycards[0].quipper.body} </Card.Text>
+					<Card.Title> {datacards.cards.quipper.title} </Card.Title>
+					<Card.Text> {datacards.cards.quipper.body} </Card.Text>
 					<Button variant="secondary">Go</Button>
 				</Card.Body>
 			</Card>
-		</CardColumns>
+		</CardColumns> 
 	);
 }
 
-function HomePageContent({title="", body="", datacards}) {
+function HomePageContent() {
 	return (
 		<div>
 				<Container>
@@ -55,8 +55,8 @@ function HomePageContent({title="", body="", datacards}) {
 					<Col lg={10}>
 						<Row>
 						<Col md={11}>
-							<Welcome title={title} body={body}/>
-							<DemoCards datacards={datacards}/>
+							<Welcome />
+							<DemoCards />
 						</Col>
 						</Row>
 					</Col>
@@ -66,7 +66,7 @@ function HomePageContent({title="", body="", datacards}) {
 	);
 }
 
-function HomePage({title="", body="", datacards}) {
+function HomePage() {
 	return (
 		<div>
 		<br/>
@@ -76,7 +76,7 @@ function HomePage({title="", body="", datacards}) {
 	       <Col md={2}>
 	       </Col>
 	       <Col md={10}>
-	        <HomePageContent title={title} body={body} datacards={datacards}/>
+	        <HomePageContent />
 	       </Col>
 	       </Row>
 		</Container>
