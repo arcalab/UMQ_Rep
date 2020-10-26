@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // must import this AND npm install
 import HomePage from './HomePage';
-import Browser from './Browser';
+import Search from '../components/Search';
 
 
 function App() {
@@ -17,11 +17,11 @@ function App() {
         <Nav1 /> 
         <Router>
          <Switch>
+          <Route path="/search">
+           <Search />
+          </Route>
           <Route path="/">
            <HomePage/>
-          </Route>
-          <Route path={"/browser"} component={BrowserRouteLoader}>
-           <Browser/>
           </Route>
          </Switch>
         </Router>
