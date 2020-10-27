@@ -22,7 +22,7 @@ function printauthors(as) {
 	return myauthors;
 }
 
-function TabReps() {
+function TabRep() {
 
 	const list = Object.keys(info.repos).map(key => ({[key]: info.repos[key]}));
 
@@ -43,7 +43,7 @@ function TabReps() {
 			{list.map((info) => takevalues(info).map((i) => 
 				<tr key={i.id}>
 				<td>{i.id}</td>
-				<td><a href={"/item/?type=rep&id=" + i.id}>{console.log(typeof i.id)}{i.Title}</a></td>
+				<td>{i.Title}</td>
 				<td>{printauthors(i.Authors)}</td>
 				</tr>))}
 		  </tbody>
@@ -72,7 +72,7 @@ function TabDocs() {
 			{list.map((info) => takevalues(info).map((i) => 
 				<tr key={i.id}>
 				<td>{i.id}</td>
-				<td><a href={"/item/?type=doc&id=" + i.id}>{i.Title}</a></td>
+				<td>{i.Title}</td>
 				<td>{printauthors(i.Authors)}</td>
 				<td>{i.Date}</td>
 				<td>{i.Type}</td>
@@ -83,22 +83,25 @@ function TabDocs() {
 		);
 }
 
-function WhichTable(thetype="") {
-	const stype = JSON.stringify(thetype.thetype);
-
-	if (stype === "\"Documents\"") {
-		return <TabDocs />;
-	}
-	else { 
-		return <TabReps />;
-	}
-}
-
-function SearchContent() {
+function ItemContent() {
 
 	let query = useQuery();
 
 	const type = query.get("type");
+	const id = query.get("id");
+
+	var list =[];
+
+	if ("rep" === type ) {
+		var list = Object.keys(info.repos).map(key => ({[key]: info.repos[key]}));
+	}
+	else { 
+		var list = Object.keys(info.docs).map(key => ({[key]: info.docs[key]}));
+	}
+
+	const myvalue= list[id];
+
+	console.log(myvalue)
 
 	return (
 		<div>
@@ -107,8 +110,8 @@ function SearchContent() {
 					<Col lg={10}>
 						<Row>
 						<Col md={11}>
-							<h1> {type} </h1>
-							<WhichTable thetype={type} />
+							<h1> {type} {id}</h1>
+
 						</Col>
 						</Row>
 					</Col>
@@ -118,7 +121,7 @@ function SearchContent() {
 	);
 }
 
-function Search() {
+function Item() {
 	return (
 		<div>
 		<br/>
@@ -128,7 +131,7 @@ function Search() {
 	       <Col md={2}>
 	       </Col>
 	       <Col md={10}>
-	        <SearchContent />
+	        <ItemContent />
 	       </Col>
 	       </Row>
 		</Container>
@@ -137,4 +140,4 @@ function Search() {
 	);
 }
 
-export default Search;
+export default Item;

@@ -9,6 +9,7 @@ import {
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // must import this AND npm install
 import HomePage from './HomePage';
 import Search from '../components/Search';
+import Item from '../components/Item';
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
          <Switch>
           <Route path="/search">
            <Search />
+          </Route>
+          <Route path="/item">
+            <Item />
           </Route>
           <Route path="/">
            <HomePage/>

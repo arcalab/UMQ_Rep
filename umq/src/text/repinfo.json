@@ -1,42 +1,48 @@
 {
 	"repos" : [{
+			"id":"0",
 			"Title": "qdays19",
 			"Authors": ["Ana Neri", "Afonso Rodrigues"],
 			"Description": "Qiskit_hands_on: Jupyter Notebook script for an introductory QISKit hands-on presentation. To run offline, download this project as a zip, unzip the folder, and open basics.ipynb with Jupyter Notebook    For the online binder image, click here or copy and paste the link below: https://mybinder.org/v2/gh/afonsofr/qdays19/master?filepath=basics.ipynb",
 			"Link": "https://github.com/afonsofr/qdays19"
 		},
 		{
+			"id":"1",
 			"Title": "mission10000",
 			"Authors": ["Ana Neri", "Afonso Rodrigues"],
 			"Description": "To participate in the hands-on class, download the notebook file `hands_on_mission_10000.ipynb`",
 			"Link": "https://github.com/afonsofr/mission10000"
 		},
 		{
+			"id":"2",
 			"Title": "Quantamorphisms",
 			"Authors": ["Ana Neri"],
 			"Description": "Information created in the context of the master dissertation \"Towards Quantum Program Calculation\".",
 			"Link": "https://github.com/arcalab/quantamorphisms"
 		},
 		{
+			"id":"3",
 			"Title": "Quantamorphisms Guide",
 			"Authors": ["Ana Neri", "José Nuno Oliveira", "Rui Soares Barbosa"],
 			"Description": "This Guide is indended to support the reading of sections 15 to 17 of paper Compiling quantamorphisms for the IBM Q-Experience. These address the use of a tool-chain leading to running quantum circuits generated from quantamorphism specifications on IBM Q-Experience devices.",
 			"Link": "https://github.com/AnaNeri/quantamorphismsGuide"
 		}],
 	"docs" : [{
-			"title": "Towards Quantum Program Calculation",
-			"desc": "Based on the similarity between the categorial derivation of classical programs from their specification and the category theory approach to quantum physics, this dissertation aims at extending the laws of classical program algebra to quantum programming. In this context, the principles of the algebra of classical programs are applied to quantum programming, in order to verify the feasibility of creating correct-by-construction quantum circuits that can run on quantum devices available in the IBM Q Experience. The reversibility restrictions of quantum circuits are ensured by minimal complements. Moreover, measurements are postponed to the end of recursive computations called “quantamorphisms” to avoid the collapse of quantum states. Quantamorphisms are classical catamorphisms extended to ensure quantum reversibility. The derived quantamorphisms implement quantum cycles (vulg. for-loops) and quantum folds on lists. By Kleisli correspondence, quantamorphisms can be written as monadic functional programs with quantum parameters. This enables the use of Haskell, a monadic functional programming language, to perform the experimental work. The examples of the calculated quantum programs are simulated in Haskell, Quipper and QISKit and run on thequantum computers of the IBM Q Experience. The main conclusions of this work are that, while all the simulations produced correspond to the predicted results, running these programs on real quantum devices results in a significant amount of errors. As quantum devices are constantly evolving, it is likely that in the near future these devices will increase their reliability, allowing programs to run more accurately. The extension of the quantamorphism concept to more general input structures, such as finite trees, remains a challenge that is left for future work. Also relevant will be the study of conditional quantum control without measurements, which will extend the scope of quantamorphisms as quantum circuit specifications.", 
-			"authors": ["Ana Neri"],
-			"date": "2018-10",
-			"link": "http://hdl.handle.net/1822/67480",
-			"type": "master thesis"
+			"id": "0",
+			"Title": "Towards Quantum Program Calculation",
+			"Authors": ["Ana Neri"],
+			"Date": "2018-10",
+			"Type": "master thesis",
+			"Link": "http://hdl.handle.net/1822/67480",
+			"Description": "Based on the similarity between the categorial derivation of classical programs from their specification and the category theory approach to quantum physics, this dissertation aims at extending the laws of classical program algebra to quantum programming. In this context, the principles of the algebra of classical programs are applied to quantum programming, in order to verify the feasibility of creating correct-by-construction quantum circuits that can run on quantum devices available in the IBM Q Experience. The reversibility restrictions of quantum circuits are ensured by minimal complements. Moreover, measurements are postponed to the end of recursive computations called “quantamorphisms” to avoid the collapse of quantum states. Quantamorphisms are classical catamorphisms extended to ensure quantum reversibility. The derived quantamorphisms implement quantum cycles (vulg. for-loops) and quantum folds on lists. By Kleisli correspondence, quantamorphisms can be written as monadic functional programs with quantum parameters. This enables the use of Haskell, a monadic functional programming language, to perform the experimental work. The examples of the calculated quantum programs are simulated in Haskell, Quipper and QISKit and run on thequantum computers of the IBM Q Experience. The main conclusions of this work are that, while all the simulations produced correspond to the predicted results, running these programs on real quantum devices results in a significant amount of errors. As quantum devices are constantly evolving, it is likely that in the near future these devices will increase their reliability, allowing programs to run more accurately. The extension of the quantamorphism concept to more general input structures, such as finite trees, remains a challenge that is left for future work. Also relevant will be the study of conditional quantum control without measurements, which will extend the scope of quantamorphisms as quantum circuit specifications."
 		},
 		{
-			"title":"Compiling quantamorphisms for the IBM Q Experience",
-			"desc": "Based on the connection between the categorical derivation of classical programs from specifications and the category-theoretic approach to quantum physics, this paper contributes to extending the laws of classical program algebra to quantum programming. This aims at building correct-by-construction quantum circuits to be deployed on quantum devices such as those available at the IBM Q Experience. Quantum circuit reversibility is ensured by minimal complements, extended recursively. Measurements are postponed to the end of such recursive computations, termed \"quantamorphisms\", thus maximising the quantum effect. Quantamorphisms are classical catamorphisms which, extended to ensure quantum reversibility, implement quantum cycles (vulg. for-loops) and quantum folds on lists. By Kleisli correspondence, quantamorphisms can be written as monadic functional programs with quantum parameters. This enables the use of Haskell, a monadic functional programming language, to perform the experimental work. Such calculated quantum programs prepared in Haskell are pushed through Quipper to the Qiskit interface to IBM Q quantum devices. The generated quantum circuits - often quite large - exhibit the predicted behaviour. However, running them on real quantum devices incurs into a significant amount of errors. As quantum devices are constantly evolving, an increase in reliability is likely in the near future, allowing for our programs to run more accurately.",
-			"authors": ["Ana Neri", "Rui Soares Barbosa", "José Nuno Oliveira"],
-			"date": "2020-10-21", 
-			"link": "https://arxiv.org/abs/2010.10510",
-			"type": "e-print"
+			"id":"1",
+			"Title":"Compiling quantamorphisms for the IBM Q Experience",
+			"Authors": ["Ana Neri", "Rui Soares Barbosa", "José Nuno Oliveira"],
+			"Date": "2020-10", 
+			"Type": "e-print",
+			"Link": "https://arxiv.org/abs/2010.10510",
+			"Description": "Based on the connection between the categorical derivation of classical programs from specifications and the category-theoretic approach to quantum physics, this paper contributes to extending the laws of classical program algebra to quantum programming. This aims at building correct-by-construction quantum circuits to be deployed on quantum devices such as those available at the IBM Q Experience. Quantum circuit reversibility is ensured by minimal complements, extended recursively. Measurements are postponed to the end of such recursive computations, termed \"quantamorphisms\", thus maximising the quantum effect. Quantamorphisms are classical catamorphisms which, extended to ensure quantum reversibility, implement quantum cycles (vulg. for-loops) and quantum folds on lists. By Kleisli correspondence, quantamorphisms can be written as monadic functional programs with quantum parameters. This enables the use of Haskell, a monadic functional programming language, to perform the experimental work. Such calculated quantum programs prepared in Haskell are pushed through Quipper to the Qiskit interface to IBM Q quantum devices. The generated quantum circuits - often quite large - exhibit the predicted behaviour. However, running them on real quantum devices incurs into a significant amount of errors. As quantum devices are constantly evolving, an increase in reliability is likely in the near future, allowing for our programs to run more accurately."
 		}]
 }
