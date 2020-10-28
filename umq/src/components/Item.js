@@ -12,75 +12,14 @@ function useQuery() {
 	return new URLSearchParams(useLocation().search);
 }
 
-function takevalues(x){
-	const y = Object.values(x);
-	return y;
-}
-
-function printauthors(as) {
-	const myauthors = as.map((a) => a + "; ")
-	return myauthors;
-}
-
-function TabRep() {
-
-	const list = Object.keys(info.repos).map(key => ({[key]: info.repos[key]}));
-
-	const values = Object.values(list[0]);
-	const keys = Object.keys(values[0]);
-	var size = 3;
-	var myhead = keys.slice(0,size);
-
-	return(
-		<div>
-		<Table>
-		  <thead>
-		   <tr>
-		   	{myhead.map((item) => <th key={item}> {item} </th> )}
-		   </tr>
-		  </thead>
-		  <tbody>
-			{list.map((info) => takevalues(info).map((i) => 
-				<tr key={i.id}>
-				<td>{i.id}</td>
-				<td>{i.Title}</td>
-				<td>{printauthors(i.Authors)}</td>
-				</tr>))}
-		  </tbody>
-		</Table>
-		</div>
-		);
-}
-
-function TabDocs() {
-	const list = Object.keys(info.docs).map(key => ({[key]: info.docs[key]}));
-
-	const values = Object.values(list[0]);
-	const keys = Object.keys(values[0]);
-	var size = 5;
-	var myhead = keys.slice(0,size);
-
-	return(
-		<div>
-		<Table>
-		  <thead>
-		   <tr>
-		   	{myhead.map((item) => <th key={item}> {item} </th> )}
-		   </tr>
-		  </thead>
-		  <tbody>
-			{list.map((info) => takevalues(info).map((i) => 
-				<tr key={i.id}>
-				<td>{i.id}</td>
-				<td>{i.Title}</td>
-				<td>{printauthors(i.Authors)}</td>
-				<td>{i.Date}</td>
-				<td>{i.Type}</td>
-				</tr>))}
-		  </tbody>
-		</Table>
-		</div>
-		);
+function smallchanges(as) {
+	if ((typeof as) === "object") {
+		const myauthors = as.map((a) => a + "; ");
+		return myauthors;
+	} else {
+		return as;
+	}
+	
 }
 
 function ItemContent() {
@@ -90,18 +29,18 @@ function ItemContent() {
 	const type = query.get("type");
 	const id = query.get("id");
 
-	var list =[];
-
 	if ("rep" === type ) {
 		var list = Object.keys(info.repos).map(key => ({[key]: info.repos[key]}));
 	}
 	else { 
-		var list = Object.keys(info.docs).map(key => ({[key]: info.docs[key]}));
+		list = Object.keys(info.docs).map(key => ({[key]: info.docs[key]}));
 	}
 
-	const myvalue= list[id];
+	const myitem= list[id];
+	const aux = Object.values(myitem)
 
-	console.log(myvalue)
+	const mytitles = Object.keys(aux[0])
+	const myinfos = Object.values(aux[0])
 
 	return (
 		<div>
@@ -110,7 +49,16 @@ function ItemContent() {
 					<Col lg={10}>
 						<Row>
 						<Col md={11}>
-							<h1> {type} {id}</h1>
+							<Table>
+							<tbody>
+								{mytitles.map((mtitle, idx) => 
+									<tr key={mtitle}>
+									  <th key={mtitle}>{mtitle}</th>
+									  <td key={idx}>{smallchanges(myinfos[idx])}</td>
+									</tr>
+								)}
+							</tbody>
+							</Table>
 
 						</Col>
 						</Row>
