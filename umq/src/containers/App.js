@@ -10,12 +10,14 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // must import
 import HomePage from './HomePage';
 import Search from '../components/Search';
 import Item from '../components/Item';
+import Header1 from '../components/Header.js'
 
 
 function App() {
   return (
     <div>
         <Nav1 /> 
+        <Header1 />
         <Router>
          <Switch>
           <Route path="/search">
