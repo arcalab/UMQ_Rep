@@ -31,16 +31,21 @@ function ItemContent() {
 
 	if ("rep" === type ) {
 		var list = Object.keys(info.repos).map(key => ({[key]: info.repos[key]}));
+		var size = 4; 
+
 	}
 	else { 
 		list = Object.keys(info.docs).map(key => ({[key]: info.docs[key]}));
+		size = 6;
 	}
 
 	const myitem= list[id];
-	const aux = Object.values(myitem)
+	const aux = Object.values(myitem);
 
-	const mytitles = Object.keys(aux[0])
-	const myinfos = Object.values(aux[0])
+	const mytitles = Object.keys(aux[0]);
+	const myinfos = Object.values(aux[0]);
+
+	var simpletitle = mytitles.slice(0,size);
 
 	return (
 		<div>
@@ -51,12 +56,15 @@ function ItemContent() {
 						<Col md={11}>
 							<Table>
 							<tbody>
-								{mytitles.map((mtitle, idx) => 
+								{simpletitle.map((mtitle, idx) => 
 									<tr key={mtitle}>
 									  <th key={mtitle}>{mtitle}</th>
 									  <td key={idx}>{smallchanges(myinfos[idx])}</td>
 									</tr>
 								)}
+								<tr><th>{mytitles[size]}</th>
+								<td><a href={myinfos[size]} target="_blank" rel="noopener noreferrer">{myinfos[size]}</a></td>
+								</tr>
 							</tbody>
 							</Table>
 
