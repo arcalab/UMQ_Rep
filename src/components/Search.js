@@ -28,7 +28,7 @@ function TabReps() {
 
 	const values = Object.values(list[0]);
 	const keys = Object.keys(values[0]);
-	var size = 3;
+	var size = 2;
 	var myhead = keys.slice(0,size);
 
 	return(
@@ -42,7 +42,6 @@ function TabReps() {
 		  <tbody>
 			{list.map((info) => takevalues(info).map((i) => 
 				<tr key={i.id}>
-				<td>{i.id}</td>
 				<td><a href={"/item/?type=rep&id=" + i.id}>{console.log(typeof i.id)}{i.Title}</a></td>
 				<td>{printauthors(i.Authors)}</td>
 				</tr>))}
@@ -57,7 +56,7 @@ function TabDocs() {
 
 	const values = Object.values(list[0]);
 	const keys = Object.keys(values[0]);
-	var size = 5;
+	var size = 4;
 	var myhead = keys.slice(0,size);
 
 	return(
@@ -71,7 +70,6 @@ function TabDocs() {
 		  <tbody>
 			{list.map((info) => takevalues(info).map((i) => 
 				<tr key={i.id}>
-				<td>{i.id}</td>
 				<td><a href={"/item/?type=doc&id=" + i.id}>{i.Title}</a></td>
 				<td>{printauthors(i.Authors)}</td>
 				<td>{i.Date}</td>

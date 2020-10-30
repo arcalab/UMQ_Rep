@@ -31,12 +31,12 @@ function ItemContent() {
 
 	if ("rep" === type ) {
 		var list = Object.keys(info.repos).map(key => ({[key]: info.repos[key]}));
-		var size = 4; 
+		var size = 3; 
 
 	}
 	else { 
 		list = Object.keys(info.docs).map(key => ({[key]: info.docs[key]}));
-		size = 6;
+		size = 5;
 	}
 
 	const myitem= list[id];

@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import UMDI from '../img/um-di.png';
-import Arca from '../img/arca.png';
+import Arca from '../img/arca-logo4.svg';
 
 
 function FooterInfo(){
