@@ -10,13 +10,13 @@ function Nav1() {
   return (
     <>
     <Navbar collapseOnSelect expand="lg" variant="light" sticky="top">
-      <Navbar.Brand href="/">Home</Navbar.Brand>
+      <Navbar.Brand href="/quantumsoftwareengineering/">Home</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
           <NavDropdown title="Browse:" id="collasible-nav-dropdown">
-            <NavDropdown.Item href="/search/?type=Documents"> Documents </NavDropdown.Item>
-            <NavDropdown.Item href="/search/?type=Github+Repositories"> Github Repositories </NavDropdown.Item>
+            <NavDropdown.Item href="/quantumsoftwareengineering/search/?type=Documents"> Documents </NavDropdown.Item>
+            <NavDropdown.Item href="/quantumsoftwareengineering/search/?type=Github+Repositories"> Github Repositories </NavDropdown.Item>
           </NavDropdown>
         </Nav>
          {/*

@@ -42,7 +42,7 @@ function TabReps() {
 		  <tbody>
 			{list.map((info) => takevalues(info).map((i) => 
 				<tr key={i.id}>
-				<td><a href={"/item/?type=rep&id=" + i.id}>{console.log(typeof i.id)}{i.Title}</a></td>
+				<td><a href={"/quantumsoftwareengineering/item/?type=rep&id=" + i.id}>{console.log(typeof i.id)}{i.Title}</a></td>
 				<td>{printauthors(i.Authors)}</td>
 				</tr>))}
 		  </tbody>
@@ -70,7 +70,7 @@ function TabDocs() {
 		  <tbody>
 			{list.map((info) => takevalues(info).map((i) => 
 				<tr key={i.id}>
-				<td><a href={"/item/?type=doc&id=" + i.id}>{i.Title}</a></td>
+				<td><a href={"/quantumsoftwareengineering/item/?type=doc&id=" + i.id}>{i.Title}</a></td>
 				<td>{printauthors(i.Authors)}</td>
 				<td>{i.Date}</td>
 				<td>{i.Type}</td>

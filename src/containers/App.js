@@ -20,11 +20,14 @@ function App() {
         <Header1 />
         <Router>
          <Switch>
-          <Route path="/search">
+          <Route path="/quantumsoftwareengineering/search">
            <Search />
           </Route>
-          <Route path="/item">
+          <Route path="/quantumsoftwareengineering/item">
             <Item />
+          </Route>
+          <Route path="/quantumsoftwareengineering/">
+           <HomePage/>
           </Route>
           <Route path="/">
            <HomePage/>

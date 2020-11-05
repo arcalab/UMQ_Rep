@@ -63,7 +63,7 @@ function ItemContent() {
 									</tr>
 								)}
 								<tr><th>{mytitles[size]}</th>
-								<td><a href={myinfos[size]} target="_blank" rel="noopener noreferrer">{myinfos[size]}</a></td>
+								<td><a href={"quantumsoftwareengineering/"+ myinfos[size]} target="_blank" rel="noopener noreferrer">{myinfos[size]}</a></td>
 								</tr>
 							</tbody>
 							</Table>
