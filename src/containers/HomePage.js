@@ -7,7 +7,6 @@ import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
 import qiskitIMG from '../img/qiskit.png';
 import quipperIMG from '../img/haskell.png';
-import Button from 'react-bootstrap/Button';
 import welcome from '../text/welcome.json';
 import datacards from '../text/cards.json';
 
@@ -31,7 +30,7 @@ function DemoCards() {
 				<Card.Body>
 					<Card.Title> {datacards.cards.qiskit.title} </Card.Title>
 					<Card.Text> {datacards.cards.qiskit.body} </Card.Text>
-					<Button variant="secondary">Go</Button>
+					<a class="mybutton" href="https://github.com/arcalab/quantumsoftwareengineering/blob/master/src/docs/DemoQiskit.ipynb" target="_blank" rel="noopener noreferrer">Go</a>
 				</Card.Body>
 			</Card>
 			
@@ -40,7 +39,7 @@ function DemoCards() {
 				<Card.Body>
 					<Card.Title> {datacards.cards.quipper.title} </Card.Title>
 					<Card.Text> {datacards.cards.quipper.body} </Card.Text>
-					<Button variant="secondary">Go</Button>
+					<a class="mybutton" href="https://github.com/arcalab/quantumsoftwareengineering/blob/master/src/docs/DemoQuipper.hs" target="_blank" rel="noopener noreferrer">Go</a>
 				</Card.Body>
 			</Card>
 		</CardColumns> 
