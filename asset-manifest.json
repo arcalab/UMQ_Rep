@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/quantumsoftwareengineering/static/css/main.717fbd0c.chunk.css",
+    "main.js": "/quantumsoftwareengineering/static/js/main.64efd9b0.chunk.js",
+    "main.js.map": "/quantumsoftwareengineering/static/js/main.64efd9b0.chunk.js.map",
+    "runtime-main.js": "/quantumsoftwareengineering/static/js/runtime-main.df1b22c2.js",
+    "runtime-main.js.map": "/quantumsoftwareengineering/static/js/runtime-main.df1b22c2.js.map",
+    "static/css/2.437d98bc.chunk.css": "/quantumsoftwareengineering/static/css/2.437d98bc.chunk.css",
+    "static/js/2.e6c00472.chunk.js": "/quantumsoftwareengineering/static/js/2.e6c00472.chunk.js",
+    "static/js/2.e6c00472.chunk.js.map": "/quantumsoftwareengineering/static/js/2.e6c00472.chunk.js.map",
+    "index.html": "/quantumsoftwareengineering/index.html",
+    "precache-manifest.53144f97476c92edef8ce03eb75dd625.js": "/quantumsoftwareengineering/precache-manifest.53144f97476c92edef8ce03eb75dd625.js",
+    "service-worker.js": "/quantumsoftwareengineering/service-worker.js",
+    "static/css/2.437d98bc.chunk.css.map": "/quantumsoftwareengineering/static/css/2.437d98bc.chunk.css.map",
+    "static/css/main.717fbd0c.chunk.css.map": "/quantumsoftwareengineering/static/css/main.717fbd0c.chunk.css.map",
+    "static/js/2.e6c00472.chunk.js.LICENSE.txt": "/quantumsoftwareengineering/static/js/2.e6c00472.chunk.js.LICENSE.txt",
+    "static/media/arca-logo4.svg": "/quantumsoftwareengineering/static/media/arca-logo4.27fff6d7.svg",
+    "static/media/bg.png": "/quantumsoftwareengineering/static/media/bg.08912955.png",
+    "static/media/haskell.png": "/quantumsoftwareengineering/static/media/haskell.e4329942.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df1b22c2.js",
+    "static/css/2.437d98bc.chunk.css",
+    "static/js/2.e6c00472.chunk.js",
+    "static/css/main.717fbd0c.chunk.css",
+    "static/js/main.64efd9b0.chunk.js"
+  ]
+}
